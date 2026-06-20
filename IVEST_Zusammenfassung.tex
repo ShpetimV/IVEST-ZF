@@ -10,6 +10,7 @@
 \usepackage{tcolorbox}
 \usepackage{microtype}
 \usepackage{array}
+\usepackage{graphicx}
 
 % --- Kompaktes Layout ---
 \setlength{\parindent}{0pt}
@@ -38,12 +39,10 @@
 \small
 \begin{multicols}{5}
 
-{\centering\colorbox{cA}{\color{white}\bfseries\,IVEST — Zusammenfassung \& Formelsammlung\,}\par}
-
 \sechead{1. Bilanz (Bestandesrechnung)}
 \K{Aktiven} (Mittelverwendung – ``worin angelegt''):
 \begin{itemize}
-\item \K{Umlaufverm.\ (UV)}: flüssig oder Umwandlung $<$1\,J — Kasse, Post, Bank, Ford.\ L+L, Vorräte, ARA.
+\item \K{Umlaufverm.\ (UV)}: flüssig oder Umwandlung $<$1\,J — Kasse, Post, Bank, Ford.\ L+L, Vorräte, Aktive Rechnungsabgrenzungen (ARA).
 \item \K{Anlageverm.\ (AV)}: Nutzung $>$1\,J — Mobilien, Immobilien, Beteiligungen, Patente.
 \end{itemize}
 \K{Passiven} (Mittelherkunft – ``wer gab Kapital''):
@@ -55,13 +54,16 @@
 \fb{\text{Summe Aktiven}=\text{Summe Passiven}}\\
 \fb{EK=\text{Aktiven}-FK}\\
 Liquidität: UV von oben nach unten zunehmend gebunden.
-\begin{exbox}
-\textbf{Kennzahlen}\\
-EK-Quote $=\tfrac{EK}{GK}$; Verschuldungsgrad $=\tfrac{FK}{GK}$\\
-GK-Rendite $=\tfrac{\text{Gewinn}+\text{FK-Zins}}{GK}$\\
-EK-Rendite $=\tfrac{\text{Gewinn}}{EK}$ (Leverage, wenn GK-Rendite $>$ FK-Zins)\\
-Liquiditätsgrade: flüssige Mittel bzw.\ UV im Verhältnis zu kurzfr.\ FK.
-\end{exbox}
+
+{\centering\includegraphics[width=\linewidth]{imgages/bilanz.png}\par}
+
+% \begin{exbox}
+% \textbf{Kennzahlen}\\
+% EK-Quote $=\tfrac{EK}{GK}$; Verschuldungsgrad $=\tfrac{FK}{GK}$\\
+% GK-Rendite $=\tfrac{\text{Gewinn}+\text{FK-Zins}}{GK}$\\
+% EK-Rendite $=\tfrac{\text{Gewinn}}{EK}$ (Leverage, wenn GK-Rendite $>$ FK-Zins)\\
+% Liquiditätsgrade: flüssige Mittel bzw.\ UV im Verhältnis zu kurzfr.\ FK.
+% \end{exbox}
 
 \sechead{2. Erfolgsrechnung (mehrstufig)}
 Stellt Aufwand \& Ertrag einer Periode gegenüber $\Rightarrow$ Gewinn (Ertrag$>$Aufwand) oder Verlust.\\
