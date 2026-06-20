@@ -1,0 +1,17 @@
+# LaTeX auxiliary and intermediate files
+*.aux
+*.log
+*.toc
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.pdf
+
+# Build directory (containing all output and auxiliary files)
+build/
+
+# OS-specific files
+.DS_Store
