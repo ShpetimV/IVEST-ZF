@@ -37,7 +37,7 @@
 
 \begin{document}
 \small
-\begin{multicols}{5}
+\begin{multicols}{4}
 
 \sechead{Bilanz (Bestandesrechnung)}
 \K{Aktiven} (Mittelverwendung – ``worin angelegt''):
@@ -118,6 +118,12 @@ Summe $=$ Veränderung flüssige Mittel.\\
 {\centering\includegraphics[width=\linewidth]{imgages/geldflussrechnung_direkt.png}\par}
 
 \K{Indirekte Berechnung} (Ausgang Reingewinn): Reingewinn $+$ liq.-unwirksame Aufwände (z.B.\ Abschreibung) $-$ liq.-unwirksame Erträge $\pm$ Veränderung NUV (Umlaufvermögen \& kurzfr.\ FK).\\
+\fb{CF=RG+\text{Abschr.}\pm\text{nicht-lw}\mp\Delta\text{Akt.}\pm\Delta\text{Pass.}}\\
+$RG$ = Reingewinn, nicht-lw = nicht liquiditätswirksame Posten,
+$\Delta\text{Akt.}$ = Veränderung Aktiven (UV), $\Delta\text{Pass.}$ = Veränderung Passiven (kurzfr.\ FK).\\
+\K{Anlagespiegelformel}:\\
+\fb{AB-\text{Abschr.}+\text{Inv.}-\text{Desinv.}=SB}\\
+$AB$ = Anfangsbestand, $SB$ = Schlussbestand, Inv.\ = Investitionen, Desinv.\ = Desinvestitionen.\\
 
 {\centering\includegraphics[width=\linewidth]{imgages/geldflussrechnung_indirekt.png}\par}
 
@@ -163,7 +169,7 @@ $r_f$ = risikoloser Zins (10-J Bundesanleihe).
 Besseres Rating $\Rightarrow$ tieferer Spread;
 längere Laufzeit $\Rightarrow$ höherer Spread (Basispunkte).
 Bei kotierten Firmen aus Anleihe-Coupons ablesbar.\\
-\K{Eigenkapitalkosten (CAPM)} = verlangte Mindestrendite (RRR);
+\K{Eigenkapitalkosten (CAPM - Capital Asset Pricing Model)} = verlangte Mindestrendite (RRR);
 kalkulatorische Opportunitätskosten:\\
 \fb{k_{EK}=r_f+\beta\,(r_M-r_f)}\\
 $r_M$ = erw.\ Marktrendite ($\approx$8\%, SPI/Index);
@@ -172,7 +178,7 @@ $\beta$ = systematisches Risiko (meist 0.5–2;
 $\beta{=}1$ wie Markt, $\beta{>}1$ riskanter/zyklisch, $\beta{<}1$ defensiv z.B.\ Food/Pharma).
 \K{Levered $\beta$} (inkl.\ Verschuldung) für CAPM;
 \emph{unlevered} für Peer-Benchmarking.\\
-\K{WACC} = $\varnothing$ gewichtete Kapitalkosten = Diskontsatz DCF = geforderte Mindestrendite:\\
+\K{WACC (Weighted Average Cost of Capital)} = $\varnothing$ gewichtete Kapitalkosten = Diskontsatz DCF = geforderte Mindestrendite:\\
 \fb{\text{WACC}=k_{EK}\tfrac{EK}{GK}+k_{FK}\tfrac{FK}{GK}}\\
 \fb{\text{WACC}_{tax}=k_{EK}\tfrac{EK}{GK}+k_{FK}\tfrac{FK}{GK}(1{-}t)}\\
 $t$ = Steuersatz.
@@ -496,80 +502,6 @@ bei nominalem WACC alle Cashflows inflationieren.\\
 \K{$\beta$ levered} (inkl.\ Verschuldung, für CAPM)
 vs.\ \K{unlevered} (für Peer-Benchmark, dann relevern).
 \end{tcolorbox}
-
-\end{multicols}
-
-% =================== SEITE 4: REINE FORMELSAMMLUNG ===================
-\clearpage
-\begin{multicols}{4}
-\normalsize
-\setlength{\parskip}{2.5pt}
-{\centering\colorbox{cA}{\color{white}\bfseries\,FORMELSAMMLUNG — Investition \& Finanzierung\,}\par}
-\vspace{2pt}
-
-\K{Bilanz / Erfolgsrechnung}\\
-\fb{\text{Aktiven}=\text{Passiven}}\quad\fb{EK=\text{Aktiven}-FK}\\
-EBITDA $\xrightarrow{-\text{Abschr.}}$ EBIT $\xrightarrow{-\text{Zins}}$ EBT $\xrightarrow{-\text{Steuer}}$ RG\\
-\fb{\text{Verschuldungsgrad}=\tfrac{FK}{GK}}\quad\fb{\text{EK-Quote}=\tfrac{EK}{GK}}
-
-\K{Cashflow (indirekt)}\\
-\fb{CF=RG+\text{Abschr.}\pm\text{nicht-lw}\mp\Delta\text{Akt.}\pm\Delta\text{Pass.}}\\
-AV: \fb{AB-\text{Abschr.}+\text{Inv.}-\text{Desinv.}=SB}
-
-\K{Kapitalkosten}\\
-\fb{k_{FK}=r_f+\text{Credit Spread}}\\
-\fb{k_{EK}=r_f+\beta\,(r_M-r_f)}\\
-\fb{\text{WACC}=k_{EK}\tfrac{EK}{GK}+k_{FK}\tfrac{FK}{GK}}\\
-\fb{\text{WACC}_{tax}=k_{EK}\tfrac{EK}{GK}+k_{FK}\tfrac{FK}{GK}(1{-}t)}
-
-\K{Statisch}\\
-\fb{\text{kalk.\ Abschr.}=\tfrac{AK-RW}{ND}}\\
-\fb{\varnothing K=\tfrac{AK+RW}{2}}\quad\fb{\text{Zins}=\varnothing K\cdot i}\\
-\fb{\text{ROI}=\tfrac{\text{Gewinn}+\text{kalk.\ Zins}}{\varnothing K}\cdot100}\\
-\fb{\text{Payback}=\tfrac{K_0}{\varnothing\,CF}}
-
-\K{Dynamisch}\\
-\fb{PV=\tfrac{CF_n}{(1+R)^n}=CF_n\cdot\text{AbF}}\\
-\fb{PV=CF\cdot\text{RBF}_{R,T}}\quad\fb{\text{RBF}_\infty=\tfrac1R}\\
-\fb{\text{NPV}=-K_0+\sum_{n=1}^{T}\tfrac{CF_n}{(1+R)^n}}\\
-\fb{\text{NPV-Koeff}=\tfrac{\text{NPV}}{K_0}}\\
-\fb{0=-K_0+\sum\tfrac{CF_n}{(1+IRR)^n}}\\
-IRR (Annuität): \fb{\text{RBF}=\tfrac{K_0}{CF}}\\
-\fb{IRR=i_1+\tfrac{\text{RBF}_{i_1}-\text{RBF}}{\text{RBF}_{i_1}-\text{RBF}_{i_2}}(i_2{-}i_1)}\\
-\fb{\text{Annuität}=\tfrac{K_0}{\text{RBF}}}
-
-\K{Bewertung}\\
-\fb{\text{Brutto-SW}=\text{Aktiven}+\text{stille Res.}}\\
-\fb{\text{Netto-SW}=\text{Brutto-SW}-FK}\\
-\fb{\text{Ertragswert}=\tfrac{\text{nachh.\ ber.\ RG}}{k_{EK}}}\\
-\fb{\text{Mittelwert}=\tfrac{2\,EW+1\,\text{Netto-SW}}{3}}\\
-\fb{\text{NOPAT}=EBIT\,(1{-}t)}\\
-FCF $=$ NOPAT $+$ Abschr.\ $\mp\Delta$NUV $-$ Inv.\ $+$ Desinv.\\
-\fb{\text{Brutto-UW}=\sum\tfrac{FCF_n}{(1{+}w)^n}+\tfrac{TV}{(1{+}w)^T}}\\
-\fb{TV=\tfrac{FCF}{w}}\quad\fb{TV=\tfrac{FCF(1+g)}{w-g}}\\
-\fb{\text{Equity}=\text{Brutto-UW}-FK}\\
-\fb{\text{Netto-UW}=\text{Kennzahl}\times\text{Multiple}}\\
-\fb{\text{KGV}=\tfrac{\text{Kurs}}{\text{Gewinn/Aktie}}}\quad\fb{\text{KBV}=\tfrac{\text{Kurs}}{\text{Buchwert/Aktie}}}\\
-\fb{\text{Goodwill}=\text{Preis}-\text{Netto-SW}}
-
-\K{Vorzeichen \& Entscheid (Merker)}
-\begin{itemize}
-\item NPV $>0$ / IRR $\geq$ WACC $\Rightarrow$ Investition \R{lohnt sich}.  \item höchster NPV (gleiches $K_0$) bzw.\ höchster NPV-Koeffizient (untersch.\ $K_0$) gewinnt.  \item Cashflow-Aufbau (dyn.): Menge$\times$Preis $-$ var.\ Kosten $-$ Fixkosten ($+$Restwert im letzten Jahr), \emph{ohne} Abschr.\ \& Zins.  \item NUV $=$ UV $-$ kurzfr.\ FK (nur betriebl.).  \item kalk.\ Zinsen: nur statisch \& Kostenvergleich, nie im Cashflow.  \item Diskontsatz: DCF/Brutto-UW $\to$ WACC$_{tax}$; Ertragswert/Equity $\to k_{EK}$.  \end{itemize} \begin{tcolorbox}[colback=cBox,colframe=cA,boxrule=0.35pt,left=3pt,right=3pt,top=2.5pt,bottom=2.5pt,arc=1pt]
-\textbf{Mini-Faktoren} (sonst Tabellen nutzen)\\[2pt]
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}l|cc|cc@{}}
- & \multicolumn{2}{c|}{AbF $\tfrac{1}{(1{+}R)^n}$} & \multicolumn{2}{c}{RBF $\sum$AbF}\\
-$n$ & 5\% & 8\% & 5\% & 8\%\\\hline
-1 & 0.952 & 0.926 & 0.952 & 0.926\\
-3 & 0.864 & 0.794 & 2.723 & 2.577\\
-5 & 0.784 & 0.681 & 4.329 & 3.993\\
-10 & 0.614 & 0.463 & 7.722 & 6.710\\
-$\infty$ & — & — & 20.0 & 12.5\\
-\end{tabular}\\[2pt]
-\footnotesize RBF$_\infty=1/R$. Genaue Werte aus den separat mitgebrachten Tabellen ablesen.
-\end{tcolorbox}
-
-\textbf{\color{cA}Symbole:} $K_0$ Kapitaleinsatz $\cdot$ $CF$ Cashflow $\cdot$ $R/w$ Diskontsatz/WACC $\cdot$ $T$ Nutzungsdauer $\cdot$ $t$ Steuersatz $\cdot$ AbF Abzinsungsfaktor $\cdot$ RBF Rentenbarwertfaktor $\cdot$ $g$ Wachstumsrate $\cdot$ $\beta$ Beta $\cdot$ $r_f$ risikolos $\cdot$ $r_M$ Marktrendite.
 
 \end{multicols}
 \end{document}
