@@ -11,11 +11,12 @@
 \usepackage{microtype}
 \usepackage{array}
 \usepackage{graphicx}
+\usepackage{colortbl}
 
 % --- Kompaktes Layout ---
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{1.5pt}
-\linespread{1.0}
+\setlength{\parskip}{1.0pt}
+\linespread{0.94}
 \setlist{nosep,leftmargin=1.0em,topsep=0pt,partopsep=0pt,itemsep=0.4pt,parsep=0pt}
 \setlist[itemize]{label=\textendash}
 \pagestyle{empty}
@@ -27,6 +28,7 @@
 \definecolor{cFor}{HTML}{fff3df}
 \definecolor{cWarn}{HTML}{fdeceb}
 \definecolor{cEx}{HTML}{eaf5ea}
+\definecolor{tbg}{HTML}{f2f2f2}
 
 \newcommand{\sechead}[1]{\par\vspace{3pt}\noindent{\colorbox{cA}{\color{white}\bfseries\,#1\,}}\par\vspace{1.5pt}}
 \newtcbox{\fbbox}{on line,boxrule=0.2pt,boxsep=1pt,left=2.5pt,right=2.5pt,top=1.2pt,bottom=1.2pt,colback=cFor,colframe=orange!55,arc=1pt}
@@ -305,6 +307,29 @@ $<$ 8\% gefordert $\Rightarrow$ \emph{nicht} rentabel.
 \K{Dynamische Payback}: diskontierte CF kumulieren bis $K_0$ gedeckt (länger als statisch).\\
 
 \sechead{Unternehmensbewertung}
+
+\noindent
+\begin{minipage}{\linewidth}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3.1cm}|>{\raggedright\arraybackslash}p{3.1cm}|}
+\hline
+\rowcolor{tbg}
+\textbf{Investitions\-rechnung} & \textbf{Unternehmens\-bewertung} \\ \hline
+\multicolumn{2}{|l|}{\cellcolor{tbg}\textbf{Zentrale Frage}} \\ \hline
+\textbf{Lohnt sich die Investition?} & Was ist der Wert eines Unternehmens? \\ \hline
+\multicolumn{2}{|l|}{\cellcolor{tbg}\textbf{Bewertungsobjekt}} \\ \hline
+Einzelne \K{Investitions\-projekte}, d.h. \textbf{ausgewählte Positionen} der Aktivseite einer Bilanz (z.\,B. Maschinen, Fahrzeuge, IT-Infrastruktur, Immobilien) & Ganze Unternehmen oder Unternehmensteile (z.\,B. Tochtergesellschaften) \\ \hline
+\multicolumn{2}{|l|}{\cellcolor{tbg}\textbf{Anzahl Bewertungsobjekte}} \\ \hline
+Vergleich mehrerer Investitions\-alternativen & Einzelnes Bewertungsobjekt \\ \hline
+\multicolumn{2}{|l|}{\cellcolor{tbg}\textbf{Bekanntheit der Daten}} \\ \hline
+Investitionsbetrag ist normalerweise \textbf{bekannt} & Unternehmenswert ist unbekannt und soll ermittelt werden \\ \hline
+\multicolumn{2}{|l|}{\cellcolor{tbg}\textbf{Betrachtete Periode}} \\ \hline
+Nutzungsdauer des Investitions\-objekts (\textbf{endliche Dauer}) & Unendlichkeit (Annahme: Unternehmen existiert in alle Ewigkeit), wobei mit einem Endwert \textbf{(Terminal Value)} gerechnet wird, der alle Erträge bis in die Ewigkeit einschliesst \\ \hline
+\end{tabular}
+\end{minipage}\par\vspace{3pt}
+
 \K{Wert $\neq$ Preis} (Preis durch Verhandlung/Markt;
 ``mehr Kunst als Wissenschaft'', Bandbreite).
 Anlässe: M\&A, IPO, Start-up-Finanzierung, Nachfolge.\\
