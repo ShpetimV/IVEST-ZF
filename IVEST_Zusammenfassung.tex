@@ -1,4 +1,4 @@
-\documentclass[8pt,a4paper,landscape]{extarticle}
+\documentclass[10pt,a4paper,landscape]{extarticle}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
@@ -15,9 +15,9 @@
 
 % --- Kompaktes Layout ---
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{1.2pt}
-\linespread{0.97}
-\setlist{nosep,leftmargin=1.0em,topsep=0pt,partopsep=0pt,itemsep=0.3pt,parsep=0pt}
+\setlength{\parskip}{1.0pt}
+\linespread{0.94}
+\setlist{nosep,leftmargin=1.0em,topsep=0pt,partopsep=0pt,itemsep=0.4pt,parsep=0pt}
 \setlist[itemize]{label=\textendash}
 \pagestyle{empty}
 
@@ -30,21 +30,18 @@
 \definecolor{cEx}{HTML}{eaf5ea}
 \definecolor{tbg}{HTML}{f2f2f2}
 
-\newcommand{\sechead}[1]{\par\vspace{2.5pt}\noindent{\colorbox{cA}{\color{white}\bfseries\,#1\,}}\par\vspace{1.2pt}}
+\newcommand{\sechead}[1]{\par\vspace{3pt}\noindent{\colorbox{cA}{\color{white}\bfseries\,#1\,}}\par\vspace{1.5pt}}
 \newtcbox{\fbbox}{on line,boxrule=0.2pt,boxsep=1pt,left=2.5pt,right=2.5pt,top=1.2pt,bottom=1.2pt,colback=cFor,colframe=orange!55,arc=1pt}
 \newcommand{\fb}[1]{\fbbox{\ensuremath{\displaystyle #1}}}
 \newcommand{\K}[1]{\textbf{\color{cB}#1}}
 \newcommand{\R}[1]{\textbf{\color{red!72!black}#1}}
-\newcommand{\hl}[1]{\colorbox{yellow!45}{#1}} 
 \newtcolorbox{exbox}{colback=cEx,colframe=cB!70!black,boxrule=0.3pt,left=2.5pt,right=2.5pt,top=1.5pt,bottom=1.5pt,arc=1pt,before skip=2pt,after skip=2pt}
-\newtcolorbox{tipbox}{colback=cWarn,colframe=red!55!black,boxrule=0.3pt,left=2.5pt,right=2.5pt,top=1.3pt,bottom=1.3pt,arc=1pt,before skip=2pt,after skip=2pt}
 
 \begin{document}
-\fontsize{6.6}{7.6}\selectfont
+\small
 \begin{multicols}{4}
 
 \sechead{Bilanz (Bestandesrechnung)}
-\K{Statische Rechnung} (Zeitpunkt/Stichtag). Zeigt Bestände, aber \emph{nicht die Ursache} für Veränderung der flüssigen Mittel oder des Gewinns.\\
 \K{Aktiven} (Mittelverwendung – ``worin angelegt''):
 \begin{itemize}
 \item \K{Umlaufverm.\ (UV)}: flüssig oder Umwandlung $<$1\,J
@@ -60,10 +57,10 @@
 \end{itemize}
 \fb{\text{Summe Aktiven}=\text{Summe Passiven}}\\
 \fb{EK=\text{Aktiven}-FK}\\
-EK ist die \emph{Ausgleichsgrösse} $\Rightarrow$ Bilanz geht \emph{immer} auf. Aktiven sortiert nach Liquidität (oben am flüssigsten), Passiven nach Fälligkeit.
- 
+Liquidität: UV von oben nach unten zunehmend gebunden.
+
 {\centering\includegraphics[width=\linewidth]{images/bilanz.png}\par}
- 
+
 \begin{exbox}
 \textbf{Kennzahlen}\\
 EK-Quote $=\tfrac{EK}{GK}$; Verschuldungsgrad $=\tfrac{FK}{GK}$\\
@@ -71,18 +68,10 @@ GK-Rendite $=\tfrac{\text{Gewinn}+\text{FK-Zins}}{GK}$\\
 EK-Rendite $=\tfrac{\text{Gewinn}}{EK}$ (Leverage, wenn GK-Rendite $>$ FK-Zins)\\
 Liquiditätsgrade: flüssige Mittel bzw.\ UV im Verhältnis zu kurzfr.\ FK.
 \end{exbox}
- 
-\sechead{Die drei Jahresrechnungen}
-\begin{tabular}{@{}l@{~}l@{}}
-\K{Bilanz} & statisch -- Bestände (1.\ JR)\\
-\K{Erfolgsr.} & dynamisch -- \emph{warum} $\Delta$EK? (2.\ JR)\\
-\K{Geldflussr.} & dynamisch -- \emph{warum} $\Delta$flüss.\ Mittel? (3.\ JR)\\
-\end{tabular}\\
-Erfolgsr.\ erklärt die Zunahme EK (Gewinn), Geldflussr.\ die Veränderung der flüssigen Mittel. Beide ``füttern'' die Schlussbilanz.
- 
+
 \sechead{Erfolgsrechnung (mehrstufig)}
 Stellt Aufwand \& Ertrag einer Periode gegenüber
-$\Rightarrow$ Gewinn (Ertrag$>$Aufwand) oder Verlust. Der Gewinn fliesst ins EK der Bilanz (= Brücke).\\
+$\Rightarrow$ Gewinn (Ertrag$>$Aufwand) oder Verlust.\\
 \begin{tabular}{@{}r@{~}l@{}}
  & Betrieblicher Ertrag (aus L+L)\\
 $-$ & Waren-/Materialaufwand\\
@@ -97,11 +86,10 @@ $-$ & Zinsaufwand (Finanzaufwand)\\
 $=$ & \K{EBT} (Gewinn vor Steuern)\\
 $-$ & Steueraufwand\\
 $=$ & \K{Reingewinn / Jahresgewinn}\\
-\end{tabular}\\
-``Earnings Before \dots'': von oben nach unten immer mehr Kostenarten dazu. EBITDA = rein operative Ertragskraft (gut für Firmenvergleich, unabhängig von Finanzierung/Steuern/Abschr.).
- 
+\end{tabular}
+
 {\centering\includegraphics[width=\linewidth]{images/erfolgsrechnung.png}\par}
- 
+
 \begin{exbox}
 \textbf{Tuti AG} (CHF): Ertrag 600'000;
 Personal 300'000;
@@ -116,122 +104,34 @@ Reingewinn $=180{-}40=\R{140'000}$\\
 \footnotesize Zins \& Steuer sind \emph{kein} Betriebsaufwand
 $\Rightarrow$ erst nach EBIT.
 \end{exbox}
- 
+
 \sechead{Geldflussrechnung (Cashflow)}
 Zeigt die Fähigkeit, Zahlungsmittel zu erwirtschaften, \& den Bedarf.\\
-\K{Ertrag/Aufwand $\neq$ Ein-/Auszahlung} (Kernkonzept!): eine Ein-/Auszahlung ist \emph{immer} Geldfluss; ein Aufwand/Ertrag muss \emph{keiner} sein.
-\begin{itemize}
-\item Abschreibung \& Bildung Rückstellung: Aufwand \emph{ohne} Auszahlung (nicht liquiditätswirksam).
-\item Umsatz auf Rechnung: Ertrag, Geld erst bei Zahlung $\to$ landet in Ford.\ L+L.
-\item Einkauf auf Rechnung: Aufwand, Auszahlung erst später $\to$ Verb.\ L+L.
-\item Wertzunahme Wertschrift: Ertrag ohne Einzahlung (erst bei Verkauf).
-\end{itemize}
-\R{Folge:} Firma kann profitabel \emph{und} illiquide sein (Gewinn, aber alles auf Rechnung, kein Cash). Genau das deckt die Geldflussr.\ auf.
- 
-\sechead{3 Bereiche der Geldflussr.}
-\begin{itemize}
-\item \K{CFO} (Betrieb): laufendes Geschäft. Basis = Erfolgsrechnung.
-\item \K{CFI} (Investition): Kauf Anlagen $-$ / Verkauf Anlagen $+$.
-\item \K{CFF} (Finanzierung): Aufnahme FK/EK $+$ / Rückzahlung \& Dividende $-$.
-\end{itemize}
-\fb{CFO+CFI+CFF=\Delta\,\text{flüssige Mittel}}\\
-\K{Darstellung}: innere Spalte = Einzelposten, äussere Spalte = \emph{Subtotal pro Bereich}. Die drei Subtotale werden \emph{erst in der Schlusszeile} addiert (nicht laufend!).\\
-\R{Drei-Vorzeichen-Muster} (Firmenphase ablesen):
-\begin{itemize}
-\item Reif (Nestlé): CFO\,$+$, CFI\,$-$, CFF\,$-$.
-\item Startup: CFO\,$-$, CFI\,$-$, CFF\,$+$ (lebt von Investorengeld).
-\end{itemize}
- 
-\sechead{Direkte Cashflow-Berechnung}
-Pro liq.-wirksamem Erfolgskonto das \emph{Bilanz-Gegenkonto} kombinieren, um vom gebuchten auf den gezahlten Betrag zu kommen.\\
-\K{Vorgehen}: (1) liq.-wirksame Erfolgskonti (Abschr.\ ist \emph{nie} lw); (2) Gegenkonto suchen; (3) korrigieren; (4) summieren (Ertrag $+$, Aufwand $-$).\\
-\K{Vorzeichenregel} (\hl{Aktiven \& Passiven, Zu- UND Abnahme}):
-\begin{tabular}{@{}l@{}}
-$+$Saldo Ertrag\ \ $-$Zunahme Aktiven\ \ $=$ lw Ertrag\\
-$+$Saldo Ertrag\ \ $+$Abnahme Aktiven\ \ $=$ lw Ertrag\\
-$+$Saldo Ertrag\ \ $+$Zunahme Passiven $=$ lw Ertrag\\
-$+$Saldo Ertrag\ \ $-$Abnahme Passiven $=$ lw Ertrag\\
-$-$Saldo Aufwand $-$Zunahme Aktiven\ \ $=$ lw Aufw.\\
-$-$Saldo Aufwand $+$Abnahme Aktiven\ \ $=$ lw Aufw.\\
-$-$Saldo Aufwand $+$Zunahme Passiven $=$ lw Aufw.\\
-$-$Saldo Aufwand $-$Abnahme Passiven $=$ lw Aufw.\\
-\end{tabular}\\
-\K{Merkregel (Intuition)}:
-\begin{itemize}
-\item \K{Aktiven (UV)}: \emph{Zunahme} bindet Geld $\Rightarrow$ entgegengesetztes Vorzeichen. \emph{Abnahme} setzt Geld frei $\Rightarrow$ gleiches Vorzeichen.
-\item \K{Passiven (kurzfr.\ FK)}: \emph{Zunahme} schiebt Zahlung auf $\Rightarrow$ gleiches Vorzeichen. \emph{Abnahme} = Zahlung jetzt $\Rightarrow$ entgegengesetzt.
-\end{itemize}
-\hl{Kurz}: Aktiven \emph{umgekehrt}, Passiven \emph{gleichgerichtet}.
- 
+\K{Ertrag/Aufwand $\neq$ Ein-/Auszahlung}: eine Ein-/Auszahlung ist \emph{immer} Geldfluss;
+Abschreibung \& Bildung Rückstellung sind Aufwand \emph{ohne} Geldfluss (nicht liquiditätswirksam).
+Wertzunahme Wertschrift = Ertrag ohne Einzahlung.\\
+\K{3 Bereiche:} CFO (Betrieb),
+CFI (Investition: Kauf $-$ / Verkauf $+$ Anlagen),
+CFF (Finanzierung: Aufnahme $+$ / Rückzahlung $-$ FK \& EK).
+Summe $=$ Veränderung flüssige Mittel.\\
+\K{Direkt}: liq.-wirksame Erträge $-$ liq.-wirksame Aufwände, je über Gegenkonto
+(z.B.\ Warenertrag $-$ Zunahme Ford.\ L+L $=$ Zahlung Kunden).\\
+
 {\centering\includegraphics[width=\linewidth]{images/geldflussrechnung_direkt.png}\par}
- 
-\begin{exbox}
-\textbf{Zahlung von Kunden}: Warenertrag 1'200; Ford.\ L+L $38{\to}58$ (Aktive $\uparrow20$).\\
-$1'200-20=\R{1'180}$ (20 noch offen).\\[2pt]
-\textbf{Zahlung an Lieferanten}: Warenaufw.\ $-660$; Vorrat $65{\to}35$ (Aktive $\downarrow30$); Verb.\ $45{\to}55$ (Passive $\uparrow10$).\\
-$-660+30+10=\R{-620}$.\\[2pt]
-Personal $-300$, übriger Aufw.\ $-140$ (kein Gegenkonto, bar).\\
-\R{CFO direkt $=1180-620-300-140=+120$}
-\end{exbox}
- 
-\sechead{Indirekte Cashflow-Berechnung}
-Start beim \K{Reingewinn}, korrigiere um alles nicht-Geldwirksame. (Methode aller echten Geschäftsberichte.)\\
+
+\K{Indirekte Berechnung} (Ausgang Reingewinn): Reingewinn $+$ liq.-unwirksame Aufwände (z.B.\ Abschreibung) $-$ liq.-unwirksame Erträge $\pm$ Veränderung NUV (Umlaufvermögen \& kurzfr.\ FK).\\
 \fb{CF=RG+\text{Abschr.}\pm\text{nicht-lw}\mp\Delta\text{Akt.}\pm\Delta\text{Pass.}}\\
-$RG$ = Reingewinn; $\Delta\text{Akt.}$ / $\Delta\text{Pass.}$ = Veränderung NUV (UV \& kurzfr.\ FK, ohne flüss.\ Mittel; plus langfr.\ Rückstellungen).\\
-\K{Vorzeichen} (gleich wie direkt):
-\begin{itemize}
-\item $-$Zunahme / $+$Abnahme: Ford.\ L+L, Vorräte, unfert./fert.\ Erzeugnisse, ARA (TA).
-\item $+$Zunahme / $-$Abnahme: Verbindlichkeiten, PRA (TP).
-\end{itemize}
-\hl{Aktiven umgekehrt, Passiven gleich} -- gleiche Regel wie oben.
- 
-{\centering\includegraphics[width=\linewidth]{images/geldflussrechnung_indirekt.png}\par}
- 
-\begin{exbox}
-\textbf{Indirekt} (gleiche Firma): RG 30; $+$Abschr.\ 70; $-$Zunahme Ford.\ 20; $+$Abnahme Vorräte 30; $+$Zunahme Verb.\ 10.\\
-$30+70-20+30+10=\R{120}$ ($=$ direkter CFO! Immer Kontrolle.)
-\end{exbox}
- 
-\sechead{Investition \& Finanzierung}
-\K{CFI}: Kauf Anlagen ($-$, Investition) \& Verkauf zum Buchwert ($+$, Desinvestition).
-\K{CFF}: AK-Erhöhung, Hypothek-Aufnahme ($+$); Dividende, Rückzahlung ($-$).
-\begin{exbox}
-CFI: Kauf Liegenschaft $-200$, Verkauf Fahrzeug $+8$ $\Rightarrow\R{-192}$.\\
-CFF: AK $+50$, Hypothek $+35$, Dividende $-20$ $\Rightarrow\R{+65}$.
-\end{exbox}
- 
-\sechead{Lückentechnik (Anlagespiegel)}
-Investitionen sind oft \emph{nicht direkt} gegeben $\Rightarrow$ als einzige Unbekannte herausrechnen. Anlagekonto bewegt sich nur durch 3 Vorgänge:\\
+$RG$ = Reingewinn, nicht-lw = nicht liquiditätswirksame Posten,
+$\Delta\text{Akt.}$ = Veränderung Aktiven (UV), $\Delta\text{Pass.}$ = Veränderung Passiven (kurzfr.\ FK).\\
+\K{Anlagespiegelformel}:\\
 \fb{AB-\text{Abschr.}+\text{Inv.}-\text{Desinv.}=SB}\\
-$AB/SB$ aus Bilanz, Abschr.\ aus ER, Desinv.\ aus Aufgabentext. \emph{Inv.}\ bleibt $\Rightarrow$ auflösen.
-\begin{exbox}
-$215-50+?-45=190 \Rightarrow ?=\R{70}$\\
-Ohne Kauf wäre SB $=120$, tatsächlich $190$ $\Rightarrow$ Differenz $+70$ \emph{muss} ein Kauf sein.\\[2pt]
-\R{Cash}: Inv.\ $70 \to -70$ in CFI; Verkauf $45 \to +45$ in CFI; Abschr.\ \emph{nicht} (nicht lw, in CFO indirekt $+$).
-\end{exbox}
- 
-\sechead{Lückentechnik (Dividenden/Reserven)}
-Bilanzgewinn Vorjahr $\to$ Reserven, Dividende, oder Vortrag (= alle möglichen Wege).
-\begin{exbox}
-\textbf{Aufg.\ 22}: Reserve $70{\to}90$ ($+20$). Zugewiesen Div.\ 8, Saldo Div.-Konto 1.1.\ $=5$ $\Rightarrow$ \R{ausbezahlt $8+5=13$}.\\
-Vortrag: $30-20-8=2$; Verlust $20\_6$ von $20$ $\Rightarrow 2-20=\R{-18}$.\\
-\R{Falle}: zugewiesene Div.\ ($8$) $\neq$ ausbezahlte Div.\ ($13$)!
-\end{exbox}
- 
-\sechead{Gesamtrechnung \& Liquiditätsnachweis}
-\begin{exbox}
-CFO $+120$, CFI $-192$, CFF $+65$ $\Rightarrow\R{-7}$.\\
-\K{Liquiditätsnachweis}: flüss.\ Mittel $12{\to}5=-7$ \checkmark\\
-\R{Eingebaute Prüfsumme}: Summe der 3 Bereiche \emph{muss} der Bilanz-$\Delta$ der flüssigen Mittel entsprechen, sonst Fehler.
-\end{exbox}
- 
-\begin{tipbox}
-\textbf{Häufige Vorzeichen-Fehler}\\
-\R{$\times$} Subtotale laufend statt blockweise addieren.\\
-\R{$\times$} Aktiven-Zunahme \emph{positiv} eingesetzt (falsch: bindet Cash $\to$ negativ).\\
-\R{$\times$} Abschreibung in CFI statt CFO (sie ist nicht lw!).\\
-\R{$\times$} Zugewiesene statt ausbezahlte Dividende verwendet.
-\end{tipbox}
+$AB$ = Anfangsbestand, $SB$ = Schlussbestand, Inv.\ = Investitionen, Desinv.\ = Desinvestitionen.\\
+
+{\centering\includegraphics[width=\linewidth]{images/geldflussrechnung_indirekt.png}\par}
+
+\K{Gesamte Geldflussrechnung}\\
+{\centering\includegraphics[width=\linewidth]{images/geldflussrechnung_gesamt.png}\par}
+{\centering\includegraphics[width=0.7\linewidth]{images/liquiditaetsnachweis.png}\par}
 
 \sechead{Finanzierung — Grundlagen}
 {\centering\includegraphics[width=\linewidth]{images/finanzierung.png}\par}
