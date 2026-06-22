@@ -285,10 +285,13 @@ NPV $=47'514-42'000=\R{+5'514}$
 $175'000{\cdot}6.710=1'174'250$;\\
 NPV $=1'174'250-937'000=\R{+237'250}$
 \end{exbox}
+\K{Net Present Costs (NPC)}: Barwert aller Kosten eines Systems über die Lebensdauer ($+K_0$) (Systemvergleich, z.B.\ Heizung; Restwert im letzten Jahr abziehen).\\
+\fb{\text{NPC}=\sum_{n=1}^{T}\dfrac{\text{Jährliche Kosten}}{(1+R)^n}+K_0}\\
+
 \K{Interner Zinssatz (IRR)}: Zins, bei dem NPV $=0$:\\
 \fb{0=-K_0+\sum_{n=1}^{T}\dfrac{CF_n}{(1+IRR)^n}}\\
 Bei Annuität: $\text{RBF}=\tfrac{K_0}{CF}$, zu $T$ den Zins in RBF-Tabelle suchen \& \K{linear interpolieren}:\\
-\fb{IRR=i_1+\dfrac{\text{RBF}_{i_1}-\text{RBF}}{\text{RBF}_{i_1}-\text{RBF}_{i_2}}(i_2{-}i_1)}\\
+\fb{IRR=i_1+\dfrac{\text{RBF}_{i_1}-\text{RBF}}{\text{RBF}_{i_1}-\text{RBF}_{i_2}}}\\
 \R{IRR $\geq$ WACC $\Rightarrow$ vorteilhaft.} Anschaulicher als NPV;
 Vorsicht beim Projektvergleich: NPV \& IRR können unterschiedlich rangieren (untersch.\ Wiederanlage-Annahme) — \R{NPV entscheidet}.
 \begin{exbox}
@@ -297,11 +300,9 @@ $K_0$ 13'000, CF 5'000, $T{=}3$: RBF $=2.6$.\\
 IRR $=7+\tfrac{2.624-2.6}{2.624-2.577}=\R{7.51\%}$\\
 $<$ 8\% gefordert $\Rightarrow$ \emph{nicht} rentabel.
 \end{exbox}
-\K{Annuitätenmethode}: konstanter CF, der bei gegeb.\ $K_0$ genau $R$ erwirtschaftet (NPV$=0$);
-$\text{Annuität}=K_0/\text{RBF}$ (z.B.\ Leasingrate).\\
+\K{Annuitätenmethode}: konstanter CF, der bei gegeb.\ $K_0$ genau $R$ erwirtschaftet (NPV$=0$);\\
+\fb{CF_1 = \text{Annuität} = \dfrac{K_0}{\text{RBF}}} (z.B.\ Leasingrate).\\
 \K{Dynamische Payback}: diskontierte CF kumulieren bis $K_0$ gedeckt (länger als statisch).\\
-\K{Net Present Costs (NPC)}: Barwert aller Kosten eines Systems über die Lebensdauer ($+K_0$) (Systemvergleich, z.B.\ Heizung; Restwert im letzten Jahr abziehen).\\
-\fb{\text{NPC}=\sum_{n=1}^{T}\dfrac{\text{Jährliche Kosten}}{(1+R)^n}+K_0}\\
 
 \sechead{Unternehmensbewertung}
 \K{Wert $\neq$ Preis} (Preis durch Verhandlung/Markt;
