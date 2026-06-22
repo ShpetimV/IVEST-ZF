@@ -165,7 +165,8 @@ stabil vs.\ gewinnabhängig.
 \sechead{Kapitalkosten \& WACC}
 \K{Fremdkapitalkosten} (über Bonität/Rating):\\
 \fb{k_{FK}=r_f+\text{Credit Spread}}\\
-$r_f$ = risikoloser Zins (10-J Bundesanleihe).
+$r_f$ = risikoloser Zins (10-J Bundesanleihe);
+Credit Spread = Risikozuschlag (aus Rating).
 Besseres Rating $\Rightarrow$ tieferer Spread;
 längere Laufzeit $\Rightarrow$ höherer Spread (Basispunkte).
 Bei kotierten Firmen aus Anleihe-Coupons ablesbar.\\
@@ -174,7 +175,7 @@ kalkulatorische Opportunitätskosten:\\
 \fb{k_{EK}=r_f+\beta\,(r_M-r_f)}\\
 $r_M$ = erw.\ Marktrendite ($\approx$8\%, SPI/Index);
 $(r_M{-}r_f)$ = Marktrisikoprämie;
-$\beta$ = systematisches Risiko (meist 0.5–2;
+$\beta$ = systematisches (Markt-)Risiko (meist 0.5–2;
 $\beta{=}1$ wie Markt, $\beta{>}1$ riskanter/zyklisch, $\beta{<}1$ defensiv z.B.\ Food/Pharma).
 \K{Levered $\beta$} (inkl.\ Verschuldung) für CAPM;
 \emph{unlevered} für Peer-Benchmarking.\\
@@ -182,7 +183,7 @@ $\beta{=}1$ wie Markt, $\beta{>}1$ riskanter/zyklisch, $\beta{<}1$ defensiv z.B.
 \fb{\text{WACC}=k_{EK}\tfrac{EK}{GK}+k_{FK}\tfrac{FK}{GK}}\\
 \fb{\text{WACC}_{tax}=k_{EK}\tfrac{EK}{GK}+k_{FK}\tfrac{FK}{GK}(1{-}t)}\\
 $t$ = Steuersatz.
-\K{Tax-Shield}: FK-Zins steuerlich abzugsfähig $\Rightarrow$ WACC$_{tax}$ tiefer.
+\K{Tax-Shield}: Steuerersparnis durch abzugsfähige FK-Zinsen $\Rightarrow$ WACC$_{tax}$ tiefer.
 $k_{EK}>k_{FK}$ (EK ist teurer).
 WACC liegt zwischen $k_{FK}$ \& $k_{EK}$;
 höherer Verschuldungsgrad $\Rightarrow$ höhere FK-Kosten.
@@ -248,11 +249,11 @@ $\tfrac{17'000+2'400}{40'000}{\cdot}100=\R{48.5\%}$
 \emph{Zeitwert: 1 CHF heute $>$ 1 CHF morgen.} Gerechnet wird mit \K{Cashflows} (operativ, \emph{ohne} Zinskosten);
 Liquidationserlös $=$ CF des letzten Jahres.\\
 \K{Barwert (PV)}:\\
-\fb{PV=\dfrac{CF_n}{(1+R)^n}=CF_n\cdot\text{AbF}}\\
+\fb{PV=\dfrac{CF_n}{(1+R)^n}=CF_n\cdot\text{AbF}} (AbF$_{R,n}=\frac{1}{(1+R)^n}$ für einzelnes Jahr)\\
 \K{Annuität/Rente} (konstanter CF): \fb{PV=CF\cdot\text{RBF}_{R,T}}\\
 $R$ = Diskontsatz = WACC.
-RBF $=\sum$AbF (ab J1);
-ewig RBF$_\infty=\tfrac1R$.\\
+RBF$_{R,T} =\sum_{n=1}^{T}$AbF (ab J1);
+ewig RBF$_\infty=\tfrac1R$; mit Wachstum: RBF $=\tfrac{1}{R-g}$.\\
 \K{Kapitalwert (NPV / NBW)}:\\
 \fb{\text{NPV}=-K_0+\sum_{n=1}^{T}\dfrac{CF_n}{(1+R)^n}}\\
 \R{NPV $>$ 0 $\Rightarrow$ lohnt sich} (steigert Unternehmenswert);
@@ -361,7 +362,8 @@ $-$ & Investitionen $+$ Desinvest.\\
 $=$ & \K{Free Cashflow (FCF)}\\
 \end{tabular}\\
 NUV $=$ UV $-$ kurzfr.\ FK (nur betriebl.\ Positionen, ohne flüssige Mittel).
-FCF \emph{vor} Zinsen (steht auch FK-Gebern zur Verfügung).
+NOPAT = Betriebsgewinn nach approx.\ Steuern, vor Zins.
+FCF \emph{vor} Zinsen (steht EK $+$ FK-Gebern zur Verfügung, Entity).
 \begin{exbox}
 \textbf{FCF-Aufbau} (EBIT 1'000, $t$ 20\%): NOPAT $=1'000{\cdot}0.8=800$;
 $+$ Abschr.\ 200 $=$ 1'000;
@@ -415,23 +417,7 @@ Multiplikator schnell, aber Peer-abhängig.\\
 \K{NPC-Bsp.}: Investition 16'000 (J0) $+$ jährl.\ Kosten 2'867 über ND, mit $R$ diskontiert, $-$ Restwert im letzten Jahr
 $\Rightarrow$ tiefste NPC gewinnt (z.B.\ Wärmepumpe vs.\ Gas).
 
-\begin{tcolorbox}[colback=cBox,colframe=cA,boxrule=0.35pt,left=2.5pt,right=2.5pt,top=2pt,bottom=2pt,arc=1pt]
-\textbf{Begriffe (Glossar)}\\
-\K{EBITDA}: Betriebsergebnis vor Zinsen, Steuern, Abschr.\\
-\K{EBIT}: Betriebsgewinn (nach Abschr., vor Zins/Steuer).\\
-\K{EBT}: Gewinn vor Steuern.\\
-\K{NOPAT}: $EBIT(1{-}t)$, Betriebsgewinn nach approx.\ Steuern, vor Zins.\\
-\K{FCF}: Free Cashflow, steht EK $+$ FK-Gebern zur Verfügung (Entity).\\
-\K{NUV}: Nettoumlaufverm.\ $=$ UV $-$ kurzfr.\ FK (betriebl.).\\
-\K{Tax Shield}: Steuerersparnis durch abzugsfähige FK-Zinsen.\\
-\K{Leverage}: EK-Rendite$\uparrow$ durch FK, solange FK-Zins $<$ GK-Rendite.\\
-\K{WACC}: gewichtete $\varnothing$-Kapitalkosten $=$ geforderte Mindestrendite.\\
-\K{Credit Spread}: Risikozuschlag (Rating) auf $r_f$.\\
-\K{$\beta$}: systematisches (Markt-)Risiko einer Aktie.\\
-\K{Goodwill}: Preis $-$ Netto-Substanzwert (immat.\ Mehrwert).\\
-\K{Stille Reserven}: Unterbew.\ Aktiven / Überbew.\ Passiven.\\
-\K{Substanz-/Ertrags-/DCF-Wert}: Vergangenheit / konstanter Gewinn / künftige Free Cashflows.
-\end{tcolorbox}
+% Removed Glossar
 
 % ============ EXAM-TRAPS ============
 \begin{tcolorbox}[colback=cWarn,colframe=red!55!black,boxrule=0.35pt,left=2.5pt,right=2.5pt,top=2pt,bottom=2pt,arc=1pt]
@@ -448,18 +434,7 @@ Equity nutzt $k_{EK}$.\\
 \R{R:} WACC = Mindestrendite, damit es sich für die Kapitalgeber lohnt.\\
 \R{R:} WACC = gewichtete $\varnothing$-Kosten von Eigen- \& Fremdkapital.\\
 \R{R:} EK ist teurer als FK ($k_{EK}>k_{FK}$);
-höherer Verschuldungsgrad erhöht FK-Kosten.
-\end{tcolorbox}
-
-% ============ FAKTOR-MERKHILFE ============
-\begin{tcolorbox}[colback=cBox,colframe=cA,boxrule=0.35pt,left=2.5pt,right=2.5pt,top=2pt,bottom=2pt,arc=1pt]
-\textbf{Faktor-Logik} (Tabellen separat mitnehmen!)\\
-AbF$_{R,n}=\dfrac{1}{(1+R)^n}$ — einzelnes Jahr abzinsen.\\
-RBF$_{R,T}=\sum_{n=1}^{T}$AbF — konstante Rente;
-RBF$_\infty=\tfrac1R$.\\
-RBF mit Wachstum: $\tfrac{1}{R-g}$ (ewig).\\[3pt]
-\textbf{Rechenaufgaben:} Schritte einzeln \& nachvollziehbar notieren (nur $+\ -\ /\ \hat{}\ ()$ ), Zwischenwerte runden wie verlangt, Endergebnis klar markieren.
-\R{Teilpunkte trotz falschem Endergebnis!} Einheiten \& Vorzeichen prüfen.
+höherer Verschuldungsgrad erhöht FK-Kosten.\\[3pt]
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=cEx,colframe=cB!70!black,boxrule=0.35pt,left=2.5pt,right=2.5pt,top=2pt,bottom=2pt,arc=1pt]
@@ -504,4 +479,19 @@ vs.\ \K{unlevered} (für Peer-Benchmark, dann relevern).
 \end{tcolorbox}
 
 \end{multicols}
+\newpage
+\pdfpagewidth=210mm
+\pdfpageheight=297mm
+\enlargethispage{10cm}
+\sechead{Faktoren-Tabellen}
+\vspace{0.5cm}
+\noindent
+\begin{minipage}{19.8cm}
+  \centering
+  \K{Abzinsungsfaktoren (AbF)}\\[4pt]
+  \includegraphics[width=\linewidth]{imgages/abzinsungsfaktoren.png}
+  \vspace{1cm}
+  \K{Rentenbarwertfaktoren (RBF)}\\[4pt]
+  \includegraphics[width=\linewidth]{imgages/rentenbarwertfaktoren.png}
+\end{minipage}
 \end{document}
