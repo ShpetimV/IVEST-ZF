@@ -254,8 +254,8 @@ Liquidationserlös $=$ CF des letzten Jahres.\\
 $R$ = Diskontsatz = WACC.
 RBF$_{R,T} =\sum_{n=1}^{T}$AbF (ab J1);
 ewig RBF$_\infty=\tfrac1R$; mit Wachstum: RBF $=\tfrac{1}{R-g}$.\\
-\K{Kapitalwert (NPV / NBW)}:\\
-\fb{\text{NPV}=-K_0+\sum_{n=1}^{T}\dfrac{CF_n}{(1+R)^n}}\\
+\K{Kapitalwert (NPV / NBW)}: Barwert aller Cashflows (Einnahmen $-$ Kosten).\\
+\fb{\text{NPV}=\sum_{n=1}^{T}\dfrac{CF_n}{(1+R)^n}-K_0}\\
 \R{NPV $>$ 0 $\Rightarrow$ lohnt sich} (steigert Unternehmenswert);
 NPV $<$ 0 $\Rightarrow$ nein.
 $K_0$ wird \emph{nicht} diskontiert (J0).\\
@@ -300,9 +300,8 @@ $<$ 8\% gefordert $\Rightarrow$ \emph{nicht} rentabel.
 \K{Annuitätenmethode}: konstanter CF, der bei gegeb.\ $K_0$ genau $R$ erwirtschaftet (NPV$=0$);
 $\text{Annuität}=K_0/\text{RBF}$ (z.B.\ Leasingrate).\\
 \K{Dynamische Payback}: diskontierte CF kumulieren bis $K_0$ gedeckt (länger als statisch).\\
-\K{Net Present Costs (NPC)}: Barwert aller Kosten $+K_0$ (Systemvergleich, z.B.\ Heizung;
-Restwert im letzten Jahr abziehen).
-NPV $=$ Barwert aller \emph{Cashflows} (Einnahmen $-$ Kosten).
+\K{Net Present Costs (NPC)}: Barwert aller Kosten eines Systems über die Lebensdauer ($+K_0$) (Systemvergleich, z.B.\ Heizung; Restwert im letzten Jahr abziehen).\\
+\fb{\text{NPC}=\sum_{n=1}^{T}\dfrac{\text{Jährliche Kosten}}{(1+R)^n}+K_0}\\
 
 \sechead{Unternehmensbewertung}
 \K{Wert $\neq$ Preis} (Preis durch Verhandlung/Markt;
@@ -488,10 +487,9 @@ vs.\ \K{unlevered} (für Peer-Benchmark, dann relevern).
 \noindent
 \begin{minipage}{19.8cm}
   \centering
-  \K{Abzinsungsfaktoren (AbF)}\\[4pt]
-  \includegraphics[width=\linewidth]{imgages/abzinsungsfaktoren.png}
-  \vspace{1cm}
-  \K{Rentenbarwertfaktoren (RBF)}\\[4pt]
+  \K{Abzinsungsfaktoren (AbF) Tabelle A}\\[4pt]
+  \includegraphics[width=\linewidth]{imgages/abzinsungsfaktoren.png}\par\vspace{1cm}
+  \K{Rentenbarwertfaktoren (RBF) Tabelle B}\\[4pt]
   \includegraphics[width=\linewidth]{imgages/rentenbarwertfaktoren.png}
 \end{minipage}
 \end{document}
